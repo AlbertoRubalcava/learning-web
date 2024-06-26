@@ -22,7 +22,7 @@ You must install Git as well as Docker on your machine. Your Git tool must be as
 ### Git and GitHub
 The easiest way to install Git and have it tied to your GitHub account is to use the [GitHub Desktop app](https://desktop.github.com).
 
-The more "advanced" way is to download Git from the [official downloads page](https://git-scm.com/downloads).
+The more "advanced" way is to download Git from the [official downloads page](https://git-scm.com/downloads). From there you can clone your repository using HTTPS or SSH.
 
 _Note:_ If you're using macOS or Linux and prefer to use the Git cli, make sure to also download the [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager). This will allow you to have your passwords saved when cloning repos using HTTPS.
 
@@ -38,14 +38,34 @@ Make sure you fork this repository first so that you can continue to the next st
 
 ### Step 1: Clone the Repository
 
-Once you've forked the repository, we must clone it to our machine. Navigate through your terminal and run the following command:
+We have two options to clone the repository. One option is to use the GitHub Desktop Application and the other option is to clone using the `git` command line interface.
+
+Additionally, using the `git` command line interface offers two ways of cloning: using HTTPS and using SSH.
+
+GitHub is recommending cloning repositories using HTTPS, and if it's your first time using the `git` command line interface then follow their guide here.
+
+If you want to clone GitHub repositories using SSH you can still do so by following the steps in the following guide.
+
+Once you've forked the repository through the GitHub web UI and authenticated / tied your machine's `git` with GitHub you are now ready to clone the repository.
+
+#### Cloning with the `git` command line interface
+
+Navigate to an appropriate directory - like `My Documents` in Windows or `Documents` in a Unix machine - in your terminal and run the following command:
 
 ```bash
-git clone https://github.com/your-username/docker-static-site-tutorial.git
-cd docker-static-site-tutorial
+# To clone using https:
+git clone https://github.com/<your-username>/learning-web.git
+
+# To clone using ssh:
+git clone git@github.com:<your-username>/learning-web.git
+
+# change directory to the newly cloned repository
+cd learning-web
 ```
 
-or clone the repository through the GitHub Desktop App and follow the prompts.
+#### Cloning with the `GitHub Desktop` application
+
+If you don't want to use the command line then you can clone the repository through the GitHub Desktop App and follow the prompts.
 
 ### Step 2: Run and build the container
 
